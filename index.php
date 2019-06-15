@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/loader.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/dumper.php';
 
 \spl_autoload_register([Loader::class, 'autoLoad']);
 
@@ -25,5 +26,4 @@ $app           ->initializeExtendedKernel(array(
                 ));
             // ->initializeContext($params);
 
-echo "<pre>";
-var_dump($app->getContext());die;
+d($app->getContext());die;
